@@ -1,7 +1,7 @@
 import colorgram
 
 def cgram():
-    colors = colorgram.extract(r"C:\\Users\\oweca\\Documents\\VS Code Workspace\\GitHub\\Learning\\01Python\\100 days of code\\Day 18 (turtle graphics)\\cody.jpg", 10)
+    colors = colorgram.extract("cody.jpg", 10)
 
     # colorgram.extract returns Color objects, which let you access
     # RGB, HSL, and what proportion of the image was that color.
