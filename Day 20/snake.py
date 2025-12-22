@@ -49,16 +49,6 @@ def block(x, y):
     snake.append(block)
     return block
 
-def scoring():
-    global score, old_score
-    score += 1
-    old_score += 1
-
-def check_score_change():
-    global score, old_score
-    if score > old_score:
-        pass
-
 if __name__ == "__main__":
     width = 600
     height = 600
