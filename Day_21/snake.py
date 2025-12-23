@@ -33,7 +33,7 @@ def start():
     h3 = block(-40, 0)
 
 def player_movement(key):
-    global h1, score, old_score
+    global h1
     if key == "a":
         h1.left(90)
     elif key == "d":
@@ -64,7 +64,7 @@ def create_score():
     score_drawer.hideturtle()
     score_drawer.penup()
     score_drawer.color("white")
-    score_drawer.goto(0, 300)
+    score_drawer.goto(0, 240)
     return score_drawer
 
 def draw_score():
@@ -86,7 +86,7 @@ def check_score_change():
 def create_block():
     x = snake[len(snake)-1].xcor()
     y = snake[len(snake)-1].ycor()
-    added_blocks = block(x, y)
+    block(x, y)
 
 def create_food():
     global food
@@ -113,6 +113,7 @@ def check_wall_collision():
 
     if x > 290 or x < -290 or y > 290 or y < -290:
         running = False
+        print("check_wall")
         return True
     return False
 
@@ -121,15 +122,15 @@ def check_snake_collision():
     for segment in snake[1:]:
         if h1.distance(segment) < 20:
             running = False
+            print("check_snake")
             return True
     return False
-
 
 if __name__ == "__main__":
     width = 600
     height = 600
     screen = turtle.Screen()
-    screen.screensize(width, height)
+    screen.setup(width, height)
     screen.title("Snake Game")
     screen.bgcolor("black")
     screen.tracer(0)
