@@ -3,6 +3,8 @@ import random
 
 def main():
     screen.listen()
+    screen.onkey(lambda: player_movement("a"), "Left")
+    screen.onkey(lambda: player_movement("d"), "Right")
     start()
     create_score()
     draw_score()
@@ -15,10 +17,7 @@ def game():
         print(f"You died! Score: {score}")
         return
     
-    screen.onkey(lambda: player_movement("d"), "d")
-    screen.onkey(lambda: player_movement("a"), "a")
-    movement()
-    default_movement()
+    snake_movement()
     check_score_change()
     check_wall_collision()
     check_food_collision()
@@ -31,23 +30,29 @@ def start():
     h1 = block(0, 0)
     h2 = block(-20, 0)
     h3 = block(-40, 0)
-
+    
 def player_movement(key):
-    global h1
+    global direction
     if key == "a":
         h1.left(90)
+        if direction != "right":
+            direction = "left"
     elif key == "d":
         h1.right(90)
+        if direction != "left":
+            direction = "right"
 
-def default_movement():
+def snake_movement():
+    prev_x = h1.xcor()
+    prev_y = h1.ycor()
+
     h1.forward(20)
-    pass
 
-def movement():
-    for i in range(len(snake) - 1, 0, -1):
-        x = snake[i - 1].xcor()
-        y = snake[i - 1].ycor()
-        snake[i].goto(x, y)
+    for i in range(1, len(snake)):
+        x = snake[i].xcor()
+        y = snake[i].ycor()
+        snake[i].goto(prev_x, prev_y)
+        prev_x, prev_y = x, y
 
 def block(x, y):
     global snake
@@ -96,8 +101,8 @@ def create_food():
     return food
 
 def draw_food():
-    x = random.randint(-280, 280)
-    y = random.randint(-280, 280)
+    x = random.randrange(-280, 281, 20)
+    y = random.randrange(-280, 281, 20)
     food.goto(x, y)
 
 def check_food_collision():
@@ -111,20 +116,15 @@ def check_wall_collision():
     x = h1.xcor()
     y = h1.ycor()
 
-    if x > 290 or x < -290 or y > 290 or y < -290:
+    if abs(h1.xcor()) > 290 or abs(h1.ycor()) > 290:
         running = False
-        print("check_wall")
-        return True
-    return False
 
 def check_snake_collision():
     global running
     for segment in snake[1:]:
-        if h1.distance(segment) < 20:
+        if h1.distance(segment) < 15:
             running = False
             print("check_snake")
-            return True
-    return False
 
 if __name__ == "__main__":
     width = 600
@@ -138,8 +138,8 @@ if __name__ == "__main__":
     score = 0
     old_score = 0
     snake = []
-    direction = 0
     running = True
+    direction = None
 
     main()
 
