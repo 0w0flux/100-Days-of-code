@@ -28,8 +28,6 @@ def game():
 def start():
     global h1
     h1 = block(0, 0)
-    h2 = block(-20, 0)
-    h3 = block(-40, 0)
     
 def player_movement(key):
     global direction
@@ -113,9 +111,6 @@ def check_food_collision():
 
 def check_wall_collision():
     global running
-    x = h1.xcor()
-    y = h1.ycor()
-
     if abs(h1.xcor()) > 290 or abs(h1.ycor()) > 290:
         running = False
 
@@ -124,7 +119,6 @@ def check_snake_collision():
     for segment in snake[1:]:
         if h1.distance(segment) < 15:
             running = False
-            print("check_snake")
 
 if __name__ == "__main__":
     width = 600
