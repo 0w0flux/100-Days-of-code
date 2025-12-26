@@ -28,6 +28,8 @@ def game():
 def start():
     global h1
     h1 = block(0, 0)
+    block(-20, 0)
+    block(-40, 0)
     
 def player_movement(key):
     global direction
