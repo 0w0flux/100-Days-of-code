@@ -21,9 +21,11 @@ def write_on_screen(country):
     screen.update()
 
 def exit():
-    for i in open_countries():
+    '''for i in open_countries():
         if i not in correct_guesses:
-            not_guessed_countries.append(i)
+            not_guessed_countries.append(i)'''
+    # Its the same just with list comprehension
+    not_guessed_countries = [i for i in open_countries() if i not in correct_guesses]
 
     write_not_guessed_countries = pandas.DataFrame(not_guessed_countries)
     write_not_guessed_countries.to_csv("Day_25_(intro_pandas)/not_guessed_countries.csv")
