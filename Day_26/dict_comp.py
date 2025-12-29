@@ -2,7 +2,7 @@ import random
 import pandas
 
 def intro():
-    # new_dict = {new_key:new_value for key,value in dict.items()if blank}
+    # new_dict = {new_key:new_value for key,value in dict.items() if blank}
     names = ["Alex", "Beth", "Caroline", "Dave", "Eleanor", "Freddie"]
     student_grades = {student:random.randint(1, 6) for student in names}
     print(student_grades)
@@ -32,9 +32,6 @@ def loop_through_a_data_frame():
         # print(type(row))
         if row.student == "Angela":
             print(row.score)
-
-
-
 
 intro()
 exercise_01()
