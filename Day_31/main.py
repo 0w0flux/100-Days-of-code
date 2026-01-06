@@ -18,6 +18,7 @@ def change_word():
         canvas.itemconfig(word_label, text="There is nothing left to learn!")
         canvas.itemconfig(language_label, text="")
         return
+    
     data_dict = random.choice(data_dict_list)
     canvas.itemconfig(card_img, image=FRONT_IMG)
     canvas.itemconfig(word_label, text=data_dict["Spanish"])
@@ -33,17 +34,15 @@ def right_pressed():
 def wrong_pressed():
     global wrong_count
     wrong_count += 1
-    idk = pandas.DataFrame([data_dict])
-    try:
-        with open("words_to_learn.csv", "x") as file:
-            idk.to_csv(file, index=False)
-    except FileExistsError:
-        idk.to_csv("words_to_learn.csv", mode='a', index=False, header=False, sep=',')
+
+    df = pandas.DataFrame([{k: v.strip() for k, v in data_dict.items()}])
+    df.to_csv(
+        "Day_31/words_to_learn.csv", "a", index=False, header=not pandas.io.common.file_exists("Day_31/words_to_learn.csv"), sep=",")
     change_word()
 
 if __name__ == "__main__":
     screen = tkinter.Tk()
-    screen.title("Flash Card App Capstone Project")
+    screen.title("Flash Card App | Capstone Project")
     screen.config(padx=50, pady=50, background=BACKGROUND_COLOR)
 
     FRONT_IMG = tkinter.PhotoImage(file="Day_31/images/card_front.png")
