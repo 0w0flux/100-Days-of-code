@@ -1,6 +1,7 @@
 import tkinter
 import pandas
 import random
+import os
 
 WIDTH = 900
 HEIGHT = 600
@@ -35,9 +36,8 @@ def wrong_pressed():
     global wrong_count
     wrong_count += 1
 
-    df = pandas.DataFrame([{k: v.strip() for k, v in data_dict.items()}])
-    df.to_csv(
-        "Day_31/words_to_learn.csv", "a", index=False, header=not pandas.io.common.file_exists("Day_31/words_to_learn.csv"), sep=",")
+    df = pandas.DataFrame([{key: value.strip() for key, value in data_dict.items()}])
+    df.to_csv("Day_31/words_to_learn.csv", mode="a", index=False, header=not os.path.exists("Day_31/words_to_learn.csv"), sep=",")
     change_word()
 
 if __name__ == "__main__":
