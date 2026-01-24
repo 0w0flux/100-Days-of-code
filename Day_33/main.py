@@ -11,6 +11,9 @@ PASSWORD = os.getenv("app_key")
 MY_LAT = 52.470809
 MY_LONG = 13.395897
 
+# https://test.com/api.php? amount=4269&type=boolean
+# everything after the ? are the parameters and they are separated by &
+
 response = requests.get(url="http://api.open-notify.org/iss-now.json")
 response.raise_for_status()
 data = response.json()
