@@ -5,7 +5,6 @@ from quiz_brain import QuizBrain
 
 question_bank = []
 for question in data_dict["results"]:
-    print(type(question))
     question_text = question["question"]
     question_answer = question["correct_answer"]
     new_question = Question(question_text, question_answer)
