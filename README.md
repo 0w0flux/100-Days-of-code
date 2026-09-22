@@ -1,6 +1,6 @@
 # 100 Days of Code
 
-![Progress](https://img.shields.io/badge/Progress-Day%2035%2F100-orange)
+![Progress](https://img.shields.io/badge/Progress-Day%2036%2F100-orange)
 [![Course](https://img.shields.io/badge/Course-100_Days_of_Code-purple)](https://www.udemy.com/course/100-days-of-code/?couponCode=25BBPMXINACTIVE)
 
 
@@ -63,7 +63,8 @@ During this challenge, I want to:
 | **32** | **Birthday Wisher** | SMTP, email sending, Pandas, and date handling | Implemented automatic personalized birthday emails |
 | **33** | **ISS Overhead Notifier / Kanye Quotes** | REST APIs, JSON, HTTP requests, and API parameters | Integrated external APIs into Python applications |
 | **34** | **Trivia Quiz** | API integration, OOP, and Tkinter | Converted API data into objects and displayed it through a GUI |
-| **35** | **Weather API** | REST APIs, and JSON| Retrieved and processed weather data from an external API |
+| **35** | **Weather API** | REST APIs, and JSON | Retrieved and processed weather data from an external API |
+| **36** | **Stock Trading News Alert** | REST APIs, JSON, `requests`, environment variables, and Twilio | Checked stock price changes and retrieved company news, with SMS notification logic |
 
 ---
 
@@ -89,13 +90,13 @@ Throughout the challenge, I work with:
 ```text
 100-Days-of-code/
 │
-├── Day_05/
-├── Day_07/
-├── ...
-├── Day_34/
-├── Day_35_(more_api)/
+├── Day_05-10/
+├── Day_11-20/
+├── Day_21-30/
+├── Day_31-40/
 │
-└── .gitignore
+├── .gitignore
+└── README.md
 ```
 
 Each `Day_*` folder contains the code, exercises, and projects for that day.
