@@ -78,7 +78,7 @@ if __name__ == "__main__":
     title_label.grid(column=1, row=0)
 
     canvas = tkinter.Canvas(width=240, height=224, bg=YELLOW, highlightthickness=0)
-    tomato_img = tkinter.PhotoImage(file="Day_28/tomato.png")
+    tomato_img = tkinter.PhotoImage(file="Day_21-30/Day_21-30/Day_28/tomato.png")
     canvas.create_image(120, 112, image=tomato_img) 
 
     timer_text = canvas.create_text(120, 130, text="00:00:00", fill="white", font=(FONT_NAME, 20, "bold"))

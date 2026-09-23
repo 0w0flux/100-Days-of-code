@@ -36,13 +36,13 @@ class Scoreboard(Turtle):
 
 
     def highscore_file_write(self, value):
-        with open("Day_24\\high_score.csv", mode="a") as file:
+        with open("Day_21-30/Day_24\\high_score.csv", mode="a") as file:
             data = str(value)
             writer = csv.writer(file)
             writer.writerow([data])
 
     def highscore_file_read(self):
-        with open("Day_24\\high_score.csv", mode="r") as file:
+        with open("Day_21-30/Day_24\\high_score.csv", mode="r") as file:
             reader = csv.reader(file)
             self.high_score = max(
                 int(row[0])

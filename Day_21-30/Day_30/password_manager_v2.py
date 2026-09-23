@@ -7,7 +7,7 @@ import json
 
 WIDTH = 200
 HEIGHT = 200
-EXPORT_PATH = "Day_30/Passwords.json"
+EXPORT_PATH = "Day_21-30/Day_30/Passwords.json"
 characters = [
     'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
     'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',
@@ -106,7 +106,7 @@ if __name__ == "__main__":
     password_var = tkinter.StringVar()
 
     canvas = tkinter.Canvas(width=WIDTH, height=HEIGHT, highlightthickness=0)
-    logo_img = tkinter.PhotoImage(file="Day_29/logo.png")
+    logo_img = tkinter.PhotoImage(file="Day_21-30/Day_21-30/Day_29/logo.png")
     canvas.create_image(WIDTH / 2, HEIGHT / 2, image=logo_img)
     canvas.grid(column=0, row=0, columnspan=3)
 

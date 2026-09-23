@@ -28,7 +28,7 @@ def exit():
     not_guessed_countries = [i for i in open_countries() if i not in correct_guesses]
 
     write_not_guessed_countries = pandas.DataFrame(not_guessed_countries)
-    write_not_guessed_countries.to_csv("Day_25_(intro_pandas)/not_guessed_countries.csv")
+    write_not_guessed_countries.to_csv("Day_21-30/Day_25_(intro_pandas)/not_guessed_countries.csv")
 
     print("The countries you didnt guess in: not_guessed_countries.csv")
 
@@ -58,14 +58,14 @@ def main():
 
 def open_countries():
     global file
-    file = pandas.read_csv("Day_25_(intro_pandas)/europe_coordinates.csv") # not 100% correct coordinates
+    file = pandas.read_csv("Day_21-30/Day_25_(intro_pandas)/europe_coordinates.csv") # not 100% correct coordinates
     return file["country"].to_list()
     
 if __name__ == "__main__":
     screen = turtle.Screen()
     screen.title("Guess the countries in and around Europe")
     screen.setup(769, 512)
-    image = "Day_25_(intro_pandas)/europe.gif"
+    image = "Day_21-30/Day_25_(intro_pandas)/europe.gif"
     screen.bgpic(image)
     screen.tracer(0)
 

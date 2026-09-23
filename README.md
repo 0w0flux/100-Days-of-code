@@ -65,6 +65,7 @@ During this challenge, I want to:
 | **34** | **Trivia Quiz** | API integration, OOP, and Tkinter | Converted API data into objects and displayed it through a GUI |
 | **35** | **Weather API** | REST APIs, and JSON | Retrieved and processed weather data from an external API |
 | **36** | **Stock Trading News Alert** | REST APIs, JSON, `requests`, environment variables, and Twilio | Checked stock price changes and retrieved company news, with SMS notification logic |
+| **37** | **Pixela – Habit Tracking** | REST APIs, requests, HTTP methods (GET, POST, PUT, DELETE) | Built a Python application that interacts with the Pixela API to create users and graphs and add, change, or delete daily data. |
 
 ---
 

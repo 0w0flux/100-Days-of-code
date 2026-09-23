@@ -1,7 +1,7 @@
 import pandas
 
 
-nato_csv = pandas.read_csv("Day_26/nato_phonetic_alphabet.csv")
+nato_csv = pandas.read_csv("Day_21-30/Day_26/nato_phonetic_alphabet.csv")
 nato_dict = {row.letter: row.code for index,row in nato_csv.iterrows()}
 print(nato_dict)
 

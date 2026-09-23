@@ -10,7 +10,7 @@ def main():
     
 def pandas_func():
     global file
-    file = pandas.read_csv("Day_25_(intro_pandas)/intro/weather_data.csv")
+    file = pandas.read_csv("Day_21-30/Day_25_(intro_pandas)/intro/weather_data.csv")
 
 def challenge_01():
     temp = file["temp"].max()
@@ -31,7 +31,7 @@ def challenge_04():
         "scores": [76, 56, 65]
     }
     data = pandas.DataFrame(data_dict)
-    data.to_csv("Day_25_(intro_pandas)/intro/challenge_04.csv")
+    data.to_csv("Day_21-30/Day_25_(intro_pandas)/intro/challenge_04.csv")
 
 if __name__ == "__main__":
     main()

@@ -2,8 +2,8 @@ import tkinter
 from quiz_brain import QuizBrain
 
 THEME_COLOR = "#375362"
-FALSE_IMG = "Day_34/images/false.png"
-TRUE_IMG = "Day_34/images/true.png"
+FALSE_IMG = "Day_31-40/Day_34/images/false.png"
+TRUE_IMG = "Day_31-40/Day_34/images/true.png"
 
 
 class QuizInterface:

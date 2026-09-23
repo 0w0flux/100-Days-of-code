@@ -54,7 +54,7 @@ def create_csv(website, user_name, password):
         "password": [password]
     }
     passwords = pandas.DataFrame(data_dict)
-    passwords.to_csv("Day_29/Passwords.csv", mode="a", header=False, index=False)
+    passwords.to_csv("Day_21-30/Day_29/Passwords.csv", mode="a", header=False, index=False)
 
 if __name__ == "__main__":
     screen = tkinter.Tk()
@@ -66,7 +66,7 @@ if __name__ == "__main__":
     password_var = tkinter.StringVar()
 
     canvas = tkinter.Canvas(width=WIDTH, height=HEIGHT, highlightthickness=0)
-    logo_img = tkinter.PhotoImage(file="Day_29/logo.png")
+    logo_img = tkinter.PhotoImage(file="Day_21-30/Day_29/logo.png")
     canvas.create_image(WIDTH / 2, HEIGHT / 2, image=logo_img)
     canvas.grid(column=0, row=0, columnspan=3)
 

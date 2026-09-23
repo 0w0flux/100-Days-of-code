@@ -6,7 +6,8 @@ import os
 WIDTH = 900
 HEIGHT = 600
 BACKGROUND_COLOR = "#B1DDC6"
-TOP_500_WORDS_FILE_PATH = "Day_31/top_500_words_spanish_to_german.csv"
+TOP_500_WORDS_FILE_PATH = "Day_31-40/Day_31/top_500_words_spanish_to_german.csv"
+
 
 def flip_card():
     canvas.itemconfig(card_img, image=BACK_IMG)
@@ -37,7 +38,7 @@ def wrong_pressed():
     wrong_count += 1
 
     df = pandas.DataFrame([{key: value.strip() for key, value in data_dict.items()}])
-    df.to_csv("Day_31/words_to_learn.csv", mode="a", index=False, header=not os.path.exists("Day_31/words_to_learn.csv"), sep=",")
+    df.to_csv("Day_31-40/Day_31/words_to_learn.csv", mode="a", index=False, header=not os.path.exists("Day_31-40/Day_31/words_to_learn.csv"), sep=",")
     change_word()
 
 if __name__ == "__main__":

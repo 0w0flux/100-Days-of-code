@@ -8,7 +8,7 @@ def main():
     
 def pandas_func():
     global file
-    file = pandas.read_csv("Day_25_(intro_pandas)/intro/2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
+    file = pandas.read_csv("Day_21-30/Day_25_(intro_pandas)/intro/2018_Central_Park_Squirrel_Census_-_Squirrel_Data.csv")
 
 def get_color(color):
     gray = (file["Primary Fur Color"] == "Gray").sum()
@@ -28,7 +28,7 @@ def create_csv():
         "number": [get_color("gray"), get_color("black"), get_color("red")]
     }
     analyse = pandas.DataFrame(data_dict)
-    analyse.to_csv("Day_25_(intro_pandas)/intro/Squirrel_Analysis.csv")
+    analyse.to_csv("Day_21-30/Day_25_(intro_pandas)/intro/Squirrel_Analysis.csv")
 
 
 if __name__ == "__main__":

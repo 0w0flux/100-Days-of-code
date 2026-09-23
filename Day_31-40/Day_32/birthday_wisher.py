@@ -19,7 +19,7 @@ def send_email(name, birthday_email, msg):
                             msg=f"Subject: Happy birthday {name}! :D \n\n{msg}")
 
 def get_birthday():
-    birthdays = pandas.read_csv("Day_32/birthdays.csv")
+    birthdays = pandas.read_csv("Day_31-40/Day_32/birthdays.csv")
     return birthdays
 
 if __name__ == "__main__":
@@ -32,7 +32,7 @@ if __name__ == "__main__":
 
     for i, row in birthday.iterrows():
         if month == row["month"] and day == row["day"]:
-            folder = pathlib.Path("Day_32/letter_templates")
+            folder = pathlib.Path("Day_31-40/Day_32/letter_templates")
             random_file = random.choice(list(folder.iterdir()))
 
             with open(random_file, "r") as file:
