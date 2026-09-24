@@ -1,9 +1,4 @@
 import json
-import os
-import dotenv
-import requests
-
-dotenv.load_dotenv()
 
 STOCK_NAME = "TSLA"
 COMPANY_NAME = "Tesla Inc"

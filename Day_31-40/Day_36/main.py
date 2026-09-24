@@ -9,7 +9,6 @@ dotenv.load_dotenv()
 STOCK_NAME = "NVDA"
 COMPANY_NAME = "NVIDIA Corporation"
 
-# doesn't work because: "Unable to create record: Invalid template name. Trial accounts can only use predefined SMS templates."
 def Get_News(msg):
 
     news_api = os.getenv("news_api")
@@ -24,8 +23,10 @@ def Get_News(msg):
             f"Brief: {article['description']}\n"
         )
 
+    print(msg)
     return message
 
+# doesn't work because: "Unable to create record: Invalid template name. Trial accounts can only use predefined SMS templates."
 def Send_Message(msg):
     twilio_api = os.getenv("twilio_api")
     twilio_secret = os.getenv("twilio_secret")
@@ -37,7 +38,7 @@ def Send_Message(msg):
     num_to = os.getenv("phone_number")
 
     message = twilio.messages.create(
-        body=Get_News(msg),
+        body=f"{Get_News(msg)}",
         from_=num_from,
         to=num_to
     )

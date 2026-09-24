@@ -1,6 +1,6 @@
 # 100 Days of Code
 
-![Progress](https://img.shields.io/badge/Progress-Day%2036%2F100-orange)
+![Progress](https://img.shields.io/badge/Progress-Day%2038%2F100-orange)
 [![Course](https://img.shields.io/badge/Course-100_Days_of_Code-purple)](https://www.udemy.com/course/100-days-of-code/?couponCode=25BBPMXINACTIVE)
 
 
@@ -66,6 +66,7 @@ During this challenge, I want to:
 | **35** | **Weather API** | REST APIs, and JSON | Retrieved and processed weather data from an external API |
 | **36** | **Stock Trading News Alert** | REST APIs, JSON, `requests`, environment variables, and Twilio | Checked stock price changes and retrieved company news, with SMS notification logic |
 | **37** | **Pixela – Habit Tracking** | REST APIs, requests, HTTP methods (GET, POST, PUT, DELETE) | Built a Python application that interacts with the Pixela API to create users and graphs and add, change, or delete daily data. |
+| **38** | **Workout Tracking** | REST APIs, HTTP requests, JSON, and Basic Authentication | Built a workout tracker that converts natural-language exercise input into workout data and stores the results in a spreadsheet |
 
 ---
 
